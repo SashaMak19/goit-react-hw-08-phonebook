@@ -14,10 +14,10 @@ const SectionContacts = () => {
 
   return (
     <ul className={styles.list}>
-      {filteredContacts.map(({ name, phone, id }) => (
+      {filteredContacts.map(({ name, number, id }) => (
         <li key={id} className={styles.item}>
           <span className={styles.span}>{name}:</span>
-          <span>{phone}</span>
+          <span>{number}</span>
           <button
             type="button"
             onClick={() => dispatch(deleteContact(id))}
